@@ -14,8 +14,8 @@ const app = new Vue ({
        changeImagePlus() {
           this.counter ++
 
-          if (this.counter > 4) {
-              this.counter = 1
+          if (this.counter > 3) {
+              this.counter = 0
           }
 
           if (this.counter === 0) {
