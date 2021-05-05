@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+</head>
+<body>
+    <main id="root">
+
+        <aside class="flex">
+            <button><i class="fa fa-angle-left" aria-hidden="true" @click="changeImageMinus()"></i></button>
+        </aside>
+        <div>
+            <div class="box">
+                <img :src="wallpaper">
+            </div>
+            
+        </div>
+        <aside class="flex">
+            <button><i class="fa fa-angle-right" aria-hidden="true" @click="changeImagePlus()"></i></button>
+        </aside>
+
+    </main>
+    <script src="vue.js"></script>
+    <script src="liveScript.js"></script>
+</body>
+</html>
