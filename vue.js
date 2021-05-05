@@ -14,49 +14,25 @@ const app = new Vue ({
        changeImagePlus() {
           this.counter ++
 
-          if (this.counter > 3) {
+          if (this.counter > this.wallpaperArray.length - 1) {
               this.counter = 0
           }
 
-          if (this.counter === 0) {
-              this.wallpaper = "img/img-1.jpg"
-          }
+          //console.log(this.counter)
 
-          else if (this.counter === 1) {
-            this.wallpaper = "img/img-2.jpg"
-          }
-
-          else if (this.counter === 2) {
-            this.wallpaper = "img/img-3.jpg"
-          }
-
-          else if (this.counter === 3) {
-            this.wallpaper = "img/img-4.jpg"
-          }
+          this.wallpaper = this.wallpaperArray[this.counter]
        },
 
        changeImageMinus() {
         this.counter --
 
-        if (0 > this.counter) {
-            this.counter = 3
+        if (this.counter < 0) {
+            this.counter = this.wallpaperArray.length - 1
         }
 
-        if (this.counter === 0) {
-            this.wallpaper = "img/img-1.jpg"
-        }
+        //console.log(this.counter)
 
-        else if (this.counter === 1) {
-          this.wallpaper = "img/img-2.jpg"
-        }
-
-        else if (this.counter === 2) {
-          this.wallpaper = "img/img-3.jpg"
-        }
-
-        else if (this.counter === 3) {
-          this.wallpaper = "img/img-4.jpg"
-        }
+        this.wallpaper = this.wallpaperArray[this.counter]
      }
     }
 })
