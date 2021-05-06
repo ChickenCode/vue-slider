@@ -1,3 +1,35 @@
 .flex {
     display: flex;
 }
+
+.justify-center {
+    justify-content: center;
+}
+
+button {
+    width: 100px;
+    border: none;
+    background-color: white;
+    
+}
+
+i {
+    border: 2px solid black;
+    padding: 0 15px;
+    border-radius: 10px;
+    background-color: rgba(211,211,211 ,0.1);
+    box-shadow: 5px 5px #999
+}
+
+i:active {
+    transform: translateY(2px);
+    box-shadow: 4px 3px #999
+}
+
+.radio-container {
+    transform: translateY(-50px);
+}
+
+img {
+    height: 600px;
+}

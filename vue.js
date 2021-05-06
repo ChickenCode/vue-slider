@@ -21,6 +21,7 @@ const app = new Vue ({
           //console.log(this.counter)
 
           this.wallpaper = this.wallpaperArray[this.counter]
+          this.changeImageRadio()
        },
 
        changeImageMinus() {
@@ -33,7 +34,26 @@ const app = new Vue ({
         //console.log(this.counter)
 
         this.wallpaper = this.wallpaperArray[this.counter]
-     }
+        this.changeImageRadio()
+        },
+
+        changeImageRadio() {
+            const pallini = document.querySelectorAll("[type='radio']")
+
+            pallini[this.counter].checked = true
+        },
+
+        radioClick() {
+            const pallini = document.querySelectorAll("[type='radio']")
+
+            pallini.forEach((element, index) => {
+                if (element.checked) {
+                    this.counter = index
+                }
+            }) 
+
+            this.wallpaper = this.wallpaperArray[this.counter]
+        }
     }
 })
 
