@@ -64,16 +64,7 @@ const app = new Vue ({
 
     mounted() {
         setInterval(() => {
-            this.counter ++
-
-          if (this.counter > this.wallpaperArray.length - 1) {
-              this.counter = 0
-          }
-
-          //console.log(this.counter)
-
-          this.wallpaper = this.wallpaperArray[this.counter]
-          this.changeImageRadio()
+          this.changeImagePlus()
         }, 3000);
     }
 })
